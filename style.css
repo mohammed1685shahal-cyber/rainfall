@@ -81,3 +81,8 @@ button {
 button:hover {
     background: #35576a;
 }
+
+#register,
+#login {
+    display: none;
+}
