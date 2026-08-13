@@ -16,14 +16,35 @@
         <h1>RAINFALL</h1>
         <div class="subtitle">A WORLD AT WAR</div>
 
-        <button onclick="alert('Account creation coming next!')">
+        <button onclick="showScreen('register')">
             CREATE ACCOUNT
         </button>
 
-        <button onclick="alert('Login system coming next!')">
+        <button onclick="showScreen('login')">
             LOGIN
         </button>
     </div>
-<script src="game.js"></script>
+<div id="register" class="screen">
+    <h2>CREATE ACCOUNT</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+    <button onclick="register()">CREATE ACCOUNT</button>
+    <button onclick="showScreen('menu')">BACK</button>
+</div>
+
+<div id="login" class="screen">
+    <h2>LOGIN</h2>
+
+    <input type="text" id="loginUsername" placeholder="Username">
+    <input type="password" id="loginPassword" placeholder="Password">
+
+    <button onclick="login()">LOGIN</button>
+    <button onclick="showScreen('menu')">BACK</button>
+</div>
+    <script src="game.js"></script>
 </body>
 </html>
